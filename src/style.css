@@ -71,13 +71,6 @@ a {
   }
 }
 
-/* @media screen and (min-width: 700px) {
-  .card {
-    margin-top: 15rem;
-    transform: scale(70%);
-  }
-} */
-
 .logo {
   mix-blend-mode: color-burn;
   padding: 9rem;
