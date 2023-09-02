@@ -20,7 +20,7 @@ export default function App() {
     <div>
       <div className="body-background"></div>
       <div className="card">
-        <img src="/img/icit.png" alt="" className="logo" />
+        <img src="https://account.kmutnb.ac.th/web/images/icit_account_logo.png" alt="" className="logo" />
         <div className="card-body">
           <form action="/login" method="POST">
             <div className="form-control">
