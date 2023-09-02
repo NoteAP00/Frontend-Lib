@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './style.css';
 
-export default function App() {
+export default function Login() {
   useEffect(() => {
     const labels = document.querySelectorAll('.form-control label');
 

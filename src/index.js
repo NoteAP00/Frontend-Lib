@@ -1,12 +1,28 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './Login';
+import Login from './Login';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <div>
+        Hello world! <hr />
+        <button onClick={() => (window.location.href = '/login')}>
+          Go to Login
+        </button>
+      </div>
+    ),
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+]);
 
-const root = createRoot(document.getElementById('app'));
-
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+createRoot(document.getElementById('app')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
