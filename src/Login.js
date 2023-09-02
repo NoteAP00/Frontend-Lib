@@ -3,16 +3,16 @@ import './style.css';
 
 export default function App() {
   useEffect(() => {
-    const labels = document.querySelectorAll(".form-control label");
+    const labels = document.querySelectorAll('.form-control label');
 
     labels.forEach((label) => {
       label.innerHTML = label.innerText
-        .split("")
+        .split('')
         .map(
           (letter, idx) =>
             `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
         )
-        .join("");
+        .join('');
     });
   }, []);
 
@@ -25,15 +25,26 @@ export default function App() {
           <form action="/login" method="POST">
             <div className="form-control">
               <input type="text" id="name-log" name="name" required />
-              <label htmlFor="name-log" className="form-label">Username</label>
+              <label htmlFor="name-log" className="form-label">
+                Username
+              </label>
               <img src="/img/person.svg" className="person" alt="" />
             </div>
             <div className="form-control">
-              <input type="password" id="password-log" name="password" required />
-              <label htmlFor="password-log" className="form-label">Password</label>
+              <input
+                type="password"
+                id="password-log"
+                name="password"
+                required
+              />
+              <label htmlFor="password-log" className="form-label">
+                Password
+              </label>
               <img src="/img/password.svg" className="password" alt="" />
             </div>
-            <button type="submit" className="button">Login</button>
+            <button type="submit" className="button">
+              Login
+            </button>
           </form>
         </div>
       </div>
