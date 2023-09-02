@@ -14,7 +14,13 @@ a {
 }
 
 .card {
-  /* background-color: red; */
+  /* Your existing CSS styles */
+  position: fixed;
+  z-index: 999;
+  top: -40%;
+  bottom: -50%;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,19 +28,61 @@ a {
   transform: scale(30%);
   transform-origin: center;
   margin-top: 10rem;
+
+  /* Responsive styles */
+
+  @media (max-width: 1000px) {
+    transform: scale(60%);
+    top: -10%;
+    bottom: -50%;
+  }
+
+  @media (max-width: 850px) {
+    transform: scale(50%);
+    top: -20%;
+    bottom: -50%;
+  }
+
+  @media (max-width: 600px) {
+    transform: scale(40%);
+    top: -50%;
+    bottom: -50%;
+  }
+
+  @media (max-width: 500px) {
+    /* Adjust styles for screens up to 480px width */
+    transform: scale(25%);
+    top: -48%;
+    bottom: -50%;
+  }
+
+  @media (max-width: 375px) {
+    /* Adjust styles for screens up to 480px width */
+    transform: scale(25%);
+    top: -60%;
+    bottom: -50%;
+  }
+
+  @media (max-width: 360px) {
+    /* Adjust styles for screens up to 480px width */
+    transform: scale(25%);
+    top: -55%;
+    bottom: -50%;
+  }
 }
-@media screen and (min-width: 700px) {
+
+/* @media screen and (min-width: 700px) {
   .card {
     margin-top: 15rem;
     transform: scale(70%);
   }
-}
+} */
 
 .logo {
   mix-blend-mode: color-burn;
   padding: 9rem;
   filter: drop-shadow(0 0 7em rgb(177, 173, 243));
-  width: 50em;
+  width: 65em;
   padding-bottom: 10rem;
   object-fit: contain;
 }
