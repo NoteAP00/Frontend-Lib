@@ -33,9 +33,7 @@ const router = createBrowserRouter([
         </button>
       </div>
     ),
-  }
-  
-  
+  },
 ]);
 
 createRoot(document.getElementById('app')).render(
