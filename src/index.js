@@ -17,8 +17,25 @@ const router = createBrowserRouter([
   },
   {
     path: '/login',
-    element: <Login />,
-  },
+    element: (
+      <div style={{ position: 'relative' }}>
+        <Login />
+        <button
+          style={{
+            position: 'fixed',
+            bottom: '20px', // Adjust this value to control the distance from the bottom
+            right: '20px', // Adjust this value to control the distance from the right
+            zIndex: '999', // Ensure the button appears above other content
+          }}
+          onClick={() => (window.location.href = '/')}
+        >
+          Go to Homepage
+        </button>
+      </div>
+    ),
+  }
+  
+  
 ]);
 
 createRoot(document.getElementById('app')).render(
